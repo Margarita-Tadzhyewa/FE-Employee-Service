@@ -1,23 +1,29 @@
 import type { Employee } from '../../../../shared/types'
 import { generalInfo, contacts, travelInfo } from '../../generalInfo'
-import { managers, months } from '../../../../shared/utils'
+import { months } from '../../../../shared/utils'
+import {
+    managers,
+    departments,
+    buildings,
+    rooms,
+    citizenships,
+    years
+} from '../../../../shared/constants/formSelectConstants'
 import { RowInput } from '../RowInput'
 
-export  interface DetailedForm {
+export interface DetailedForm {
     birthDay: string
     birthMonth: string
     birthYear: string
     managerId: string
     [key: string]: string
 }
+
 interface EditDetailedProps {
     emp: Employee
     form: DetailedForm
     setForm: React.Dispatch<React.SetStateAction<DetailedForm>>
 }
-
-const currentYear = new Date().getFullYear()
-const years = Array.from({ length: 100 }, (_, i) => currentYear - i)
 
 export const EditDetailed = ({ emp, form, setForm }: EditDetailedProps) => {
     const onChange = (
@@ -26,7 +32,7 @@ export const EditDetailed = ({ emp, form, setForm }: EditDetailedProps) => {
         const { name, value } = e.target
         setForm((fields) => ({ ...fields, [name]: value }))
     }
-    
+
     const general = generalInfo
         .filter((item) => item.type !== 'date' && item.type !== 'manager')
         .map((item) => {
@@ -64,16 +70,31 @@ export const EditDetailed = ({ emp, form, setForm }: EditDetailedProps) => {
         <div className="detailed-info">
             <p className="p-header">general info</p>
             <div className="type-info">
-                {general.map((item, index) => (
-                    <RowInput
-                        key={index}
-                        label={item.label}
-                        icon={item.icon}
-                        name={item.field}
-                        value={item.value}
-                        onChange={onChange}
-                    />
-                ))}
+                {general.map((item, index) => {
+                    let options: string[] = []
+                    if (item.field === 'department') options = departments
+                    if (item.field === 'building') options = buildings
+                    if (item.field === 'room') options = rooms
+
+                    return (
+                        <RowInput
+                            key={index}
+                            label={item.label}
+                            icon={item.icon}
+                            name={item.field}
+                            value={item.value}
+                            onChange={onChange}
+                            type={
+                                ['department', 'building', 'room'].includes(
+                                    item.field
+                                )
+                                    ? 'select'
+                                    : 'text'
+                            }
+                            options={options}
+                        />
+                    )
+                })}
             </div>
 
             <div className="row-info">
@@ -170,6 +191,10 @@ export const EditDetailed = ({ emp, form, setForm }: EditDetailedProps) => {
                         name={item.field}
                         value={item.value}
                         onChange={onChange}
+                        type={item.field === 'citizenship' ? 'select' : 'text'}
+                        options={
+                            item.field === 'citizenship' ? citizenships : []
+                        }
                     />
                 ))}
             </div>

@@ -3,6 +3,13 @@ import { useSelector } from 'react-redux'
 
 import type { Employee } from '../../../shared/types'
 import type { RootState } from '../../../../store/store'
+import arrowIcon from '../../../assets/icons/arrow.svg'
+import remoteIcon from '../../../assets/icons/remote-icon.svg'
+import copyIcon from '../../../assets/icons/copy.svg'
+import penIcon from '../../../assets/icons/pen.svg'
+import defAvatar from '../../../assets/images/default-avatar.jpg'
+
+
 
 interface BasicInfoProps {
     emp: Employee
@@ -20,14 +27,14 @@ export const BasicInfo = ({ emp, onEdit }: BasicInfoProps) => {
         <div className="basic-info">
             <Link to="/">
                 <button className="arrow-back">
-                    <img src="../../assets/icons/arrow.svg" alt="arrow-icon" />
+                    <img src={arrowIcon} alt="arrow-icon" />
                 </button>
             </Link>
 
             <div className="avatar-img">
                 <img
                     src={
-                        emp.user_avatar || '../assets/images/default-avatar.jpg'
+                        emp.user_avatar || defAvatar
                     }
                     alt="profile-photo"
                     className="profile-photo"
@@ -35,7 +42,7 @@ export const BasicInfo = ({ emp, onEdit }: BasicInfoProps) => {
                 {emp.isRemoteWork && (
                     <p className="is-remote-work">
                         <img
-                            src="../../assets/icons/remote-icon.svg"
+                            src={remoteIcon}
                             alt="remote-icon"
                         />
                     </p>
@@ -54,7 +61,7 @@ export const BasicInfo = ({ emp, onEdit }: BasicInfoProps) => {
                 </p>
             </div>
             <button className="copy-link" onClick={copyUrl}>
-                <img src="../../assets/icons/copy.svg" alt="copy-icon" />
+                <img src={copyIcon} alt="copy-icon" />
                 <a href="#">
                     <p>Copy Link</p>
                 </a>
@@ -62,7 +69,7 @@ export const BasicInfo = ({ emp, onEdit }: BasicInfoProps) => {
             {(user?.role === 'ADMIN' || user?._id === emp.manager?.id) && (
                 <>
                     <button className="edit" onClick={onEdit}>
-                        <img src="../../assets/icons/pen.svg" alt="pen-icon" />
+                        <img src={penIcon} alt="pen-icon" />
                         <p>edit</p>
                     </button>
                 </>

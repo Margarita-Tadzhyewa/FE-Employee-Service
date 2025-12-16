@@ -1,10 +1,17 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
-import type { LogInResponse, LogInDTO, SignUpResponse, SignUpDTO } from './types'
+import type {
+    LogInResponse,
+    LogInDTO,
+    SignUpResponse,
+    SignUpDTO,
+} from './types'
+
+const API_URL = import.meta.env.VITE_API_URL
 
 export const authApi = createApi({
     reducerPath: 'authApi',
-    baseQuery: fetchBaseQuery({ baseUrl: 'https://be-employee-service.onrender.com' }),
+    baseQuery: fetchBaseQuery({ baseUrl: API_URL }),
     endpoints: (builder) => ({
         login: builder.mutation<LogInResponse, LogInDTO>({
             query: (body) => ({
@@ -32,4 +39,5 @@ export const authApi = createApi({
     }),
 })
 
-export const { useLoginMutation, useLogoutMutation, useRegisterMutation } = authApi
+export const { useLoginMutation, useLogoutMutation, useRegisterMutation } =
+    authApi

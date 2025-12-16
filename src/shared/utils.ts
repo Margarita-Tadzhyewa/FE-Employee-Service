@@ -1,11 +1,5 @@
 import type { Employee } from "./types"
 
-export const managers = [
-    { id: 'd6d206e5-2ca4-443d-8404-dc84e2d15', name: 'Eren Yeger' },
-    { id: 'd6d206e5-2ca4-443d-8404-dc05dffd284e2d15', name: 'Tanjiro Kamado' },
-    { id: 'd6d2ff06e5-2ca4-443d-8404-dc05284e2d15', name: 'Sukuna Ramen' },
-
-]
 export const months: string[] = [
     'Jan',
     'Feb',

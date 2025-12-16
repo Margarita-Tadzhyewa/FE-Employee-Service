@@ -10,7 +10,7 @@ export const PrivateRoute = () => {
 
     if (isLoading) {
         return (
-            <div className="flex justify-center items-center h-screen">
+            <div className="loading">
                 <p>Loading</p>
             </div>
         )

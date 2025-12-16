@@ -1,3 +1,6 @@
+import gridIcon from '../../../assets/icons/grid.svg'
+import listIcon from '../../../assets/icons/list.svg'
+
 interface EmployeeToolBarProps {
     typeView: 'grid' | 'list'
     setTypeView: (view: 'grid' | 'list') => void
@@ -12,19 +15,19 @@ export const EmployeeToolBar = ({
     return (
         <>
             <p>
-                <span>{amount}</span> employess displayed
+                <span>{amount}</span> employees displayed
             </p>
             <img
-                src="../../assets/icons/grid.svg"
-                alt=""
+                src={gridIcon}
+                alt="grid-icon"
                 className={`icons-type ${
                     typeView === 'grid' ? 'icons-type-active' : ''
                 }`}
                 onClick={() => setTypeView('grid')}
             />
             <img
-                src="../../assets/icons/list.svg"
-                alt=""
+                src={listIcon}
+                alt="list-icon"
                 className={`icons-type ${
                     typeView === 'list' ? 'icons-type-active' : ''
                 }`}

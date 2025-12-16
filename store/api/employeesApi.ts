@@ -8,9 +8,11 @@ import type {
     UpdateProfileDTO,
 } from './types'
 
+const API_URL = import.meta.env.VITE_API_URL
+
 export const employeesApi = createApi({
     reducerPath: 'employeesApi',
-    baseQuery: fetchBaseQuery({ baseUrl: 'https://be-employee-service.onrender.com' }),
+    baseQuery: fetchBaseQuery({ baseUrl: API_URL }),
     tagTypes: ['Employees'],
     endpoints: (builder) => ({
         getAllEmployees: builder.query<Employee[], void>({

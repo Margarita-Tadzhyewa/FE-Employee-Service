@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom'
 
 import type { UserAuth } from '../types'
 import { navLinks } from '../constants/routes'
+import questionIcon from '../../assets/icons/question.svg'
+import defAvatar from '../../assets/images/default-avatar.jpg'
 
 interface BurgerMenuProps {
     user: UserAuth | null
@@ -35,7 +37,7 @@ export const BurgerMenu = ({
                     <img
                         src={
                             user?.user_avatar ||
-                            '../../assets/images/default-avatar.jpg'
+                            defAvatar
                         }
                         alt="photo_1"
                         onClick={onClickPhoto}
@@ -73,7 +75,7 @@ export const BurgerMenu = ({
                 </nav>
 
                 <button>
-                    <img src="/assets/icons/question.svg" alt="question" />
+                    <img src={questionIcon} alt="question" />
                     <p>SUPPORT</p>
                 </button>
             </div>

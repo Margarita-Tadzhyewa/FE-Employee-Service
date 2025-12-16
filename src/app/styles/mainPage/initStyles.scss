@@ -1,5 +1,2 @@
-@import '../reset.scss';
-@import '../header.scss';
-@import './defaultStyles.scss';
-@import '../notFoundBlock.scss';
-@import './media400.scss';
+@use './defaultStyles.scss';
+@use './media400.scss';

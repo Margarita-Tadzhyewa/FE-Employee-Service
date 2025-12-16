@@ -10,7 +10,6 @@ import type { AppDispatch } from '../../store/store'
 import { useRegisterMutation } from '../../store/api/authApi'
 import { useFormErrors } from '../modules/auth/hooks/useFormErrors'
 
-
 export const RegisterForm = () => {
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
@@ -19,7 +18,7 @@ export const RegisterForm = () => {
     const [remember, setRemember] = useState(false)
     const navigate = useNavigate()
     const dispatch = useDispatch<AppDispatch>()
-    const [registerUser] = useRegisterMutation()
+    const [registerUser, { isLoading }] = useRegisterMutation()
 
     const { error, showError, resetErrors, clearError, checkServerError } =
         useFormErrors()
@@ -166,8 +165,8 @@ export const RegisterForm = () => {
                     </div>
 
                     <div className="mt-10">
-                        <button type="submit" id="signUpButton">
-                            Sign Up
+                        <button type="submit" id="signUpButton" disabled={isLoading}>
+                           {isLoading ? 'Signing Up...' : 'Sign Up'}
                         </button>
                     </div>
                 </form>

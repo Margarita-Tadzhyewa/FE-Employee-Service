@@ -1,9 +1,5 @@
 import { Link, useNavigate, NavLink } from 'react-router-dom'
 import { useState, useRef } from 'react'
-import questionIcon from '../../assets/icons/question.svg'
-import logOutIcon from '../../assets/icons/logout.svg'
-import burgerIcon from '../../assets/icons/burger.svg'
-import defAvatar from '../../assets/images/default-avatar.jpg'
 
 import '../../app/styles/header.scss'
 import { useDispatch, useSelector } from 'react-redux'
@@ -12,6 +8,11 @@ import { navLinks } from '../constants/routes'
 import { logOut } from '../../../store/slices/userSlice'
 import type { RootState, AppDispatch } from '../../../store/store'
 import { useLogoutMutation } from '../../../store/api/authApi'
+import questionIcon from '../../assets/icons/question.svg'
+import logOutIcon from '../../assets/icons/logout.svg'
+import crossIcon from '../../assets/icons/cross.svg'
+import burgerIcon from '../../assets/icons/burger.svg'
+import defAvatar from '../../assets/images/default-avatar.jpg'
 
 import { BurgerMenu } from './BurgerMenu'
 
@@ -19,6 +20,7 @@ const ICONS = {
     question: questionIcon,
     logout: logOutIcon,
     burger: burgerIcon,
+    cross: crossIcon
 }
 
 export const Header = () => {
@@ -146,17 +148,7 @@ export const Header = () => {
                             {!openBurger ? (
                                 <img src={ICONS.burger} alt="burger-icon" />
                             ) : (
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="16"
-                                    height="16"
-                                    viewBox="0 0 15 15"
-                                >
-                                    <path
-                                        fill="#f2f6f9"
-                                        d="M3.64 2.27L7.5 6.13l3.84-3.84A.92.92 0 0 1 12 2a1 1 0 0 1 1 1a.9.9 0 0 1-.27.66L8.84 7.5l3.89 3.89A.9.9 0 0 1 13 12a1 1 0 0 1-1 1a.92.92 0 0 1-.69-.27L7.5 8.87l-3.85 3.85A.92.92 0 0 1 3 13a1 1 0 0 1-1-1a.9.9 0 0 1 .27-.66L6.16 7.5L2.27 3.61A.9.9 0 0 1 2 3a1 1 0 0 1 1-1c.24.003.47.1.64.27Z"
-                                    />
-                                </svg>
+                                <img src={ICONS.cross} alt="cross-icon" />
                             )}
                         </span>
 

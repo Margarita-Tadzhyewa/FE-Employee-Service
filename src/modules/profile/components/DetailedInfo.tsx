@@ -11,18 +11,23 @@ export const DetailedInfo = ({ emp }: DetailedInfoProps) => {
     const general = generalInfo.map((item) => {
         let value = emp[item.field as keyof Employee] || ''
         let link: string = ''
+
         if (item.type === 'date') {
-            value = `${emp.date_birth?.day || ''} ${emp.date_birth?.month || ''} ${emp.date_birth?.year || ''}`
+            value = `${emp.date_birth?.day || ''} ${
+                emp.date_birth?.month || ''
+            } ${emp.date_birth?.year || ''}`
         }
         if (item.type === 'manager') {
-            value = `${emp.manager?.first_name || ''} ${emp.manager?.last_name || ''}`
+            value = `${emp.manager?.first_name || ''} ${
+                emp.manager?.last_name || ''
+            }`
             link = emp.manager?.id ? `/users/${emp.manager.id}` : ''
         }
 
         return {
             label: item.label,
             icon: item.icon,
-            value,
+            value: String(value),
             link,
             type: item.type,
             colorP: item.colorP,
@@ -35,7 +40,7 @@ export const DetailedInfo = ({ emp }: DetailedInfoProps) => {
         return {
             label: item.label,
             icon: item.icon,
-            value,
+            value: String(value),
             colorP: item.colorP,
         }
     })
@@ -45,7 +50,7 @@ export const DetailedInfo = ({ emp }: DetailedInfoProps) => {
         return {
             label: item.label,
             icon: item.icon,
-            value,
+            value: String(value),
         }
     })
     return (

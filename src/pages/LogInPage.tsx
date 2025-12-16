@@ -18,7 +18,7 @@ export const LoginForm = () => {
     const navigate = useNavigate()
     const dispatch = useDispatch<AppDispatch>()
     const user = useSelector((state: RootState) => state.user.user)
-    const [logInUser] = useLoginMutation()
+    const [logInUser, { isLoading }] = useLoginMutation()
 
     const { error, showError, resetErrors, clearError, checkServerError } =
         useFormErrors()
@@ -111,8 +111,8 @@ export const LoginForm = () => {
                     </div>
 
                     <div className="mt-10">
-                        <button type="submit" id="logInButton">
-                            Log In
+                        <button type="submit" id="logInButton" disabled={isLoading}>
+                            {isLoading ? 'Logging in...' : 'Log In'}
                         </button>
                     </div>
                 </form>

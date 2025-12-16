@@ -1,6 +1,4 @@
 @use '../mixins.scss' as *;
-@import '../reset.scss';
-@import '../header.scss';
 
 .profile-info-page {
     margin: 22px 0;
@@ -248,7 +246,7 @@
         color: var(--text-middle);
         font-weight: 500;
 
-        > input {
+        > input, >select {
             padding: 8px 15px;
             width: 100%;
             border: 1px solid var(--text-small);

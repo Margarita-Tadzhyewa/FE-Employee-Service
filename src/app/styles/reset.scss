@@ -60,6 +60,15 @@ body {
     padding-bottom: 100px;
 } 
 
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    color: var(--blue-accent);
+    font-size: 25px;
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
     --background-color: #1c1f20;

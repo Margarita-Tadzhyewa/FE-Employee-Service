@@ -5,8 +5,8 @@ import { useUpdateEmployeeProfileMutation } from '../../../../../store/api/emplo
 import type { Employee } from '../../../../shared/types'
 import { generalInfo, contacts, travelInfo } from '../../generalInfo'
 import { mapFormData } from '../../mapper'
-import { managers } from '../../../../shared/utils'
-import type {UpdateProfileDTO} from '../../../../../store/api/types'
+import { managers } from '../../../../shared/constants/formSelectConstants'
+import type { UpdateProfileDTO } from '../../../../../store/api/types'
 
 import { EditDetailed } from './EditDetailed'
 import { EditBasic } from './EditBasic'
@@ -20,8 +20,9 @@ interface DetailedInfoProps {
 
 export const EditProfilePage = ({ emp, onSave }: DetailedInfoProps) => {
     const { id } = useParams<{ id: string }>()
+    const [error, setError] = useState<string | null>(null)
 
-    const [updateProfile] = useUpdateEmployeeProfileMutation()
+    const [updateProfile, { isLoading }] = useUpdateEmployeeProfileMutation()
 
     const [detailedForm, setDetailedForm] = useState<DetailedForm>(() => {
         const form: DetailedForm = {
@@ -60,16 +61,20 @@ export const EditProfilePage = ({ emp, onSave }: DetailedInfoProps) => {
     const saveNewData = async () => {
         if (!id) return
 
-        const newData: BasicForm & DetailedForm = { ...basicForm, ...detailedForm }
+        const newData: BasicForm & DetailedForm = {
+            ...basicForm,
+            ...detailedForm,
+        }
         const mappedNewData = mapFormData(newData, managers)
 
         try {
-            await updateProfile({ id, data: mappedNewData as UpdateProfileDTO}).unwrap()
-            alert('change successfully')
+            await updateProfile({
+                id,
+                data: mappedNewData as UpdateProfileDTO,
+            }).unwrap()
             onSave?.()
-        } catch (err) {
-            console.log('error while changind data', err)
-            alert('error changing dara')
+        } catch {
+            setError('Failed to change profile data')
         }
     }
 
@@ -81,9 +86,10 @@ export const EditProfilePage = ({ emp, onSave }: DetailedInfoProps) => {
                 form={detailedForm}
                 setForm={setDetailedForm}
             />
-            <button className="save" onClick={saveNewData}>
-                Save
+            <button className="save" onClick={saveNewData} disabled={isLoading}>
+                 {isLoading ? 'Saving...' : 'Save'}
             </button>
+            {error && <p className="role-error">{error}</p>}
         </div>
     )
 }

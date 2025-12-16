@@ -1,4 +1,9 @@
 import { useNavigate } from 'react-router-dom'
+import defAvatar from '../../../assets/images/default-avatar.jpg'
+import bagIcon from '../../../assets/icons/bag.svg'
+import doorIcon from '../../../assets/icons/door.svg'
+
+
 
 import type { Employee } from '../../../shared/types'
 
@@ -16,7 +21,7 @@ export const EmployeeCardGrid = ({ emp }: EmployeeCardGridProps) => {
         <div className="employee-single-card" onClick={onClickCard}>
             <img
                 src={
-                    emp.user_avatar || '../../assets/images/default-avatar.jpg'
+                    emp.user_avatar || defAvatar
                 }
                 alt="employees-avatar"
             />
@@ -26,11 +31,11 @@ export const EmployeeCardGrid = ({ emp }: EmployeeCardGridProps) => {
             <div className="line"></div>
             <div className="common-info">
                 <div>
-                    <img src="./assets/icons/bag.svg" alt="bag-icon" />
+                    <img src={bagIcon} alt="bag-icon" />
                     <p className="department">{emp.department}</p>
                 </div>
                 <div>
-                    <img src="./assets/icons/door.svg" alt="room-icon" />
+                    <img src={doorIcon} alt="room-icon" />
                     <p className="room">{emp.room}</p>
                 </div>
             </div>

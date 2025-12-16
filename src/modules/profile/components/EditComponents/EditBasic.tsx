@@ -1,5 +1,7 @@
 import type { Employee } from '../../../../shared/types'
 import { InputBasicField } from '../InputBasicField'
+import remoteIcon from '../../../../assets/icons/remote-icon.svg'
+import defAvatar from '../../../../assets/images/default-avatar.jpg'
 
 export interface BasicForm {
     first_name: string
@@ -26,7 +28,7 @@ export const EditBasic = ({ emp, form, setForm }: EditBasicProps) => {
             <div className="avatar-img">
                 <img
                     src={
-                        emp.user_avatar || '../assets/images/default-avatar.jpg'
+                        emp.user_avatar || defAvatar
                     }
                     alt="profile-photo"
                     className="profile-photo"
@@ -34,7 +36,7 @@ export const EditBasic = ({ emp, form, setForm }: EditBasicProps) => {
                 {emp.isRemoteWork && (
                     <p className="is-remote-work">
                         <img
-                            src="../../assets/icons/remote-icon.svg"
+                            src={remoteIcon}
                             alt="remote-icon"
                         />
                     </p>

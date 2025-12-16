@@ -1,4 +1,4 @@
-import React from 'react'
+import searchIcon from '../../assets/icons/search.svg'
 
 interface SearchInputProps {
     value: string
@@ -16,7 +16,7 @@ export const SearchInput = ({
     return (
         <label className={className}>
             <span className="search-icon">
-                <img src="src/assets/icons/search.svg" alt="search" />
+                <img src={searchIcon} alt="search" />
             </span>
             <input
                 type="text"

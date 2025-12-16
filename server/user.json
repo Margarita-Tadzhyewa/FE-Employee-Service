@@ -1,0 +1,369 @@
+{
+  "users": [
+    {
+      "_id": "d6d206e5-2ca4-443d-8404-dc05284e2d15",
+      "isRemoteWork": true,
+      "user_avatar": "/assets/images/profile-photo.jpg",
+      "first_name": "Luffy",
+      "last_name": "Monkey",
+      "first_native_name": "Luffy",
+      "last_native_name": "Monkey",
+      "middle_native_name": "D.",
+      "department": "Web & Mobile",
+      "building": "Pilsudskiego 69 (Poland)",
+      "room": "1404",
+      "date_birth": {
+        "year": 1999,
+        "month": 1,
+        "day": 1
+      },
+      "desk_number": 20,
+      "manager": {
+        "id": "d6d206e5-2ca4-443d-8404-dc84e2d15",
+        "first_name": "Eren",
+        "last_name": "Yeger"
+      },
+      "phone": "+12931293129",
+      "email": "luffy.monkey@leverx.com",
+      "skype": "live:.cid.21asd41jd1m132",
+      "cnumber": "C5336116",
+      "citizenship": "Georgia",
+      "visa": [
+        {
+          "issuing_country": "Poland",
+          "type": "National visa type D",
+          "start_date": 1652158800000,
+          "end_date": 1683608400000
+        }
+      ],
+      "passwordHash": "$2b$10$ZsNslRJUfNqfvAGrlr6EZ.lgZxAxc48kv5dFtyHBVaJlggWkX0ej.",
+      "role": "HR"
+    },
+    {
+      "_id": "d6d206e5-2ca4-443d-8404-dc05289989d15",
+      "isRemoteWork": true,
+      "user_avatar": "/assets/images/cat.jpg",
+      "first_name": "Megumi",
+      "last_name": "Fushiguro",
+      "first_native_name": "Megumi",
+      "last_native_name": "Fushiguro",
+      "middle_native_name": "Z.",
+      "department": "Web & Mobile",
+      "building": "Pilsudskiego 69 (Poland)",
+      "room": "1404",
+      "date_birth": {
+        "year": 1999,
+        "month": 1,
+        "day": 1
+      },
+      "desk_number": 20,
+      "manager": {
+        "id": "",
+        "first_name": "John",
+        "last_name": "Snow"
+      },
+      "phone": "+12931293129",
+      "email": "megumi.fushiguro@leverx.com",
+      "skype": "live:.cid.21asd41jd1m132",
+      "cnumber": "C5336116",
+      "citizenship": "Georgia",
+      "visa": [],
+      "passwordHash": "$2b$10$ZsNslRJUfNqfvAGrlr6EZ.lgZxAxc48kv5dFtyHBVaJlggWkX0ej.",
+      "role": "ADMIN"
+    },
+    {
+      "_id": "d6d206e5-2ca4-443d-8404-dc052ddfde2ddd",
+      "isRemoteWork": false,
+      "user_avatar": "/assets/images/satoru.jpg",
+      "first_name": "Gojo",
+      "last_name": "Satoru",
+      "first_native_name": "Gojo",
+      "last_native_name": "Satoru",
+      "middle_native_name": "M.",
+      "department": "Marketing",
+      "building": "Pilsudskiego 69 (Japan)",
+      "room": "1404",
+      "date_birth": {
+        "year": 2004,
+        "month": 1,
+        "day": 1
+      },
+      "desk_number": "19",
+      "manager": {
+        "id": "d6d206e5-2ca4-443d-8404-dc05dffd284e2d15",
+        "first_name": "Tanjiro",
+        "last_name": "Kamado"
+      },
+      "phone": "+12931293129",
+      "email": "luwwffy.monkey@leverx.com",
+      "skype": "live:.cid.21asd41jd1m132",
+      "cnumber": "C5336116",
+      "citizenship": "Japan",
+      "visa": [],
+      "passwordHash": "$2b$10$ZsNslRJUfNqfvAGrlr6EZ.lgZxAxc48kv5dFtyHBVaJlggWkX0ej.",
+      "role": "EMPLOYEE"
+    },
+    {
+      "_id": "d6d206e5-2ca4-443d-8404-dc84e2d15",
+      "isRemoteWork": true,
+      "user_avatar": "/assets/images/eren.jpg",
+      "first_name": "Eren",
+      "last_name": "Yeger",
+      "first_native_name": "Eren",
+      "last_native_name": "Yeger",
+      "middle_native_name": "Fiz",
+      "department": "Web & Mobile",
+      "building": "Pilsudskiego 69 (Poland)",
+      "room": "1404",
+      "date_birth": {
+        "year": 1999,
+        "month": 1,
+        "day": 1
+      },
+      "desk_number": 20,
+      "manager": {
+        "id": "d6d20ff6e5-2ca4-443d-8404-dc05284e2d15",
+        "first_name": "Nobara",
+        "last_name": "Kugisaki"
+      },
+      "phone": "+12931293129",
+      "email": "eren.yeger@leverx.com",
+      "skype": "live:.cid.21asd41jd1m132",
+      "cnumber": "C5336116",
+      "citizenship": "Germany",
+      "visa": [
+        {
+          "issuing_country": "Poland",
+          "type": "National visa type D",
+          "start_date": 1652158800000,
+          "end_date": 1683608400000
+        }
+      ],
+      "passwordHash": "$2b$10$ZsNslRJUfNqfvAGrlr6EZ.lgZxAxc48kv5dFtyHBVaJlggWkX0ej.",
+      "role": "EMPLOYEE"
+    },
+    {
+      "_id": "d6d206e5-2ca4-443d-8404-dc05dffd284e2d15",
+      "isRemoteWork": false,
+      "user_avatar": "/assets/images/tanjiro.jpg",
+      "first_name": "Tanjiro",
+      "last_name": "Kamado",
+      "first_native_name": "Tanjiro",
+      "last_native_name": "Kamado",
+      "middle_native_name": "L.",
+      "department": "Web & Mobile",
+      "building": "Pilsudskiego 69 (Poland)",
+      "room": "1501",
+      "date_birth": {
+        "year": 1999,
+        "month": 1,
+        "day": 1
+      },
+      "desk_number": 20,
+      "manager": {
+        "id": "d6d206e5-2ca4-443d-8404-dc05289989d15",
+        "first_name": "Megumi",
+        "last_name": "Fushiguro"
+      },
+      "phone": "+12931293129",
+      "email": "ldskskffy.monkey@leverx.com",
+      "skype": "live:.cid.21asd41jd1m132",
+      "cnumber": "C5336116",
+      "citizenship": "Japan",
+      "visa": [
+        {
+          "issuing_country": "Poland",
+          "type": "National visa type D",
+          "start_date": 1652158800000,
+          "end_date": 1683608400000
+        }
+      ],
+      "passwordHash": "$2b$10$ZsNslRJUfNqfvAGrlr6EZ.lgZxAxc48kv5dFtyHBVaJlggWkX0ej.",
+      "role": "HR"
+    },
+    {
+      "_id": "d6d206e5-2ca4-443d-8404-fdfdfd2845",
+      "isRemoteWork": true,
+      "user_avatar": "/assets/images/akerman.jpg",
+      "first_name": "Levi",
+      "last_name": "Akerman",
+      "first_native_name": "Levi",
+      "last_native_name": "Akerman",
+      "middle_native_name": "D.",
+      "department": "Web & Mobile",
+      "building": "Pilsudskiego 69 (Poland)",
+      "room": "1404",
+      "date_birth": {
+        "year": 1901,
+        "month": 1,
+        "day": 1
+      },
+      "desk_number": 20,
+      "manager": {
+        "id": "987ff8cb-b506-4dff5e-9166-ab8c644bb891",
+        "first_name": "John",
+        "last_name": "Snow"
+      },
+      "phone": "+12931293129",
+      "email": "lufddffy.monkey@leverx.com",
+      "skype": "live:.cid.21asd41jd1m132",
+      "cnumber": "C5336116",
+      "citizenship": "Georgia",
+      "visa": [
+        {
+          "issuing_country": "Poland",
+          "type": "National visa type D",
+          "start_date": 1652158800000,
+          "end_date": 1683608400000
+        }
+      ],
+      "passwordHash": "$2b$10$ZsNslRJUfNqfvAGrlr6EZ.lgZxAxc48kv5dFtyHBVaJlggWkX0ej.",
+      "role": "EMPLOYEE"
+    },
+    {
+      "_id": "d6d2ff06e5-2ca4-443d-8404-dc05284e2d15",
+      "isRemoteWork": false,
+      "user_avatar": "/assets/images/sukuna.jpg",
+      "first_name": "Sukuna",
+      "last_name": "Ramen",
+      "first_native_name": "Sukuna",
+      "last_native_name": "Ramen",
+      "middle_native_name": "W.",
+      "department": "Web & Mobile",
+      "building": "Pilsudskiego 69 (Poland)",
+      "room": "1304",
+      "date_birth": {
+        "year": 1980,
+        "month": 12,
+        "day": 22
+      },
+      "desk_number": "20",
+      "manager": {
+        "id": "987ff8cb-b506-4d5e-9166-ab8c644bb891",
+        "first_name": "",
+        "last_name": ""
+      },
+      "phone": "+12931293129",
+      "email": "suskunaramen.monkey@leverx.com",
+      "skype": "live:.cid.21asd41jd1m132",
+      "cnumber": "C5336116",
+      "citizenship": "Korea",
+      "visa": [
+        {
+          "issuing_country": "Poland",
+          "type": "National visa type D",
+          "start_date": 1652158800000,
+          "end_date": 1683608400000
+        }
+      ],
+      "passwordHash": "$2b$10$ZsNslRJUfNqfvAGrlr6EZ.lgZxAxc48kv5dFtyHBVaJlggWkX0ej.",
+      "role": "HR"
+    },
+    {
+      "_id": "d6d20ff6e5-2ca4-443d-8404-dc05284e2d15",
+      "isRemoteWork": true,
+      "user_avatar": "/assets/images/nobara.jpg",
+      "first_name": "Nobara",
+      "last_name": "Kugisaki",
+      "first_native_name": "Nobara",
+      "last_native_name": "Kugisaki",
+      "middle_native_name": "K.",
+      "department": "Web & Mobile",
+      "building": "Pilsudskiego 69 (Poland)",
+      "room": "1404",
+      "date_birth": {
+        "year": 1901,
+        "month": 1,
+        "day": 1
+      },
+      "desk_number": 20,
+      "manager": {
+        "id": "d6d206e5-2ca4-443d-8404-dc05284e2d15",
+        "first_name": "Luffy",
+        "last_name": "Monkey"
+      },
+      "phone": "+12931293129",
+      "email": "lufdffy.monkey@leverx.com",
+      "skype": "live:.cid.21asd41jd1m132",
+      "cnumber": "C5336116",
+      "citizenship": "Georgia",
+      "visa": [
+        {
+          "issuing_country": "Poland",
+          "type": "National visa type D",
+          "start_date": 1652158800000,
+          "end_date": 1683608400000
+        }
+      ],
+      "passwordHash": "$2b$10$ZsNslRJUfNqfvAGrlr6EZ.lgZxAxc48kv5dFtyHBVaJlggWkX0ej.",
+      "role": "EMPLOYEE"
+    },
+    {
+      "_id": "d6dd206e5-2fca4-443d-8404-dc05284de2d15",
+      "isRemoteWork": false,
+      "user_avatar": "/assets/images/naruto.jpg",
+      "first_name": "Naruto",
+      "last_name": "Uzudamki",
+      "first_native_name": "Naruto",
+      "last_native_name": "Uzudamki",
+      "middle_native_name": "",
+      "department": "Web & Mobile",
+      "building": "Pilsudskiego 69 (Poland)",
+      "room": "1404",
+      "date_birth": {
+        "year": 1901,
+        "month": 1,
+        "day": 1
+      },
+      "desk_number": 20,
+      "manager": {
+        "id": "987ff8cb-b506-4d5e-9166-ab8c644bb891",
+        "first_name": "John",
+        "last_name": "Snow"
+      },
+      "phone": "+12931293129",
+      "email": "lufffy.monkey@leverx.com",
+      "skype": "live:.cid.21asd41jd1m132",
+      "cnumber": "C5336116",
+      "citizenship": "Georgia",
+      "visa": [
+        {
+          "issuing_country": "Poland",
+          "type": "National visa type D",
+          "start_date": 1652158800000,
+          "end_date": 1683608400000
+        }
+      ],
+      "role": "HR"
+    },
+    {
+      "_id": "Yzh1VLHMHCi5rKzUwP0xW",
+      "first_name": "Margo",
+      "last_name": "Tadzhyewa",
+      "email": "el.sw.2015@gmail.com",
+      "passwordHash": "$2b$10$29M4TtAKybbx2XUYSSUvFOMF1GVtU79qcgPEdW1Q3/vg1vv6Ogg.6",
+      "role": "EMPLOYEE",
+      "middle_native_name": "B.",
+      "first_native_name": "Margaryta",
+      "last_native_name": "Tadzhyewa",
+      "department": "FE",
+      "building": "",
+      "room": "501",
+      "desk_number": "",
+      "phone": "+37555888777",
+      "skype": "",
+      "cnumber": "",
+      "citizenship": "",
+      "date_birth": {
+        "year": 2002,
+        "month": 12,
+        "day": 30
+      },
+      "manager": {
+        "id": "d6d206e5-2ca4-443d-8404-dc84e2d15",
+        "first_name": "Eren",
+        "last_name": "Yeger"
+      }
+    }
+  ]
+}

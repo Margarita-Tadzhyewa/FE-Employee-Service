@@ -3,7 +3,9 @@ interface RowInputProps {
     icon: string
     name: string
     value: string
-    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+    onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void
+    type?: 'text' | 'select'
+    options?: string[]
 }
 
 export const RowInput = ({
@@ -12,6 +14,8 @@ export const RowInput = ({
     name,
     value,
     onChange,
+    type = 'text',
+    options = [],
 }: RowInputProps) => {
     return (
         <div className="row-info">
@@ -21,12 +25,24 @@ export const RowInput = ({
             </div>
 
             <div className="value">
-                <input
-                    type="text"
-                    name={name}
-                    value={value}
-                    onChange={onChange}
-                />
+                {type === 'select' ? (
+                    <select name={name} value={value || ''} onChange={onChange}>
+                        <option value="">Select {label.toLowerCase()}</option>
+                        {options.map((option, index) => (
+                            <option key={index} value={option}>
+                                {option}
+                            </option>
+                        ))}
+                    </select>
+                ) : (
+                    <input
+                        type="text"
+                        name={name}
+                        value={value || ''}
+                        onChange={onChange}
+                        placeholder={`Enter ${label.toLowerCase()}`}
+                    />
+                )}
             </div>
         </div>
     )

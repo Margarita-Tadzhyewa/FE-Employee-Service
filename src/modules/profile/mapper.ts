@@ -10,7 +10,6 @@ export function mapFormData(
     managers: Manager[]
 ) {
     const { birthDay, birthMonth, birthYear, managerId, ...rest } = formData
-
     const selectedManager = managers.find((m) => m.id === managerId)
     const [firstName = '', lastName = ''] =
         selectedManager?.name.split(' ') ?? []

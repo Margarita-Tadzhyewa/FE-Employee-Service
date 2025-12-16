@@ -10,17 +10,9 @@ export interface Employee {
     department: string
     building: string
     room: string
-    date_birth: {
-        year: number
-        month: number
-        day: number
-    }
+    date_birth: DateParts
     desk_number: number
-    manager: {
-        id: string
-        first_name: string
-        last_name: string
-    }
+    manager: Manager
     phone: string
     email: string
     skype: string
@@ -29,6 +21,19 @@ export interface Employee {
     visa: Visa[]
     role: Role
 }
+
+export interface DateParts {
+    year: number
+    month: number
+    day: number
+}
+
+export type Manager = {
+    id: Employee['_id']
+    first_name: Employee['first_name']
+    last_name: Employee['last_name']
+}
+
 export interface Visa {
     issuing_country: string
     type: string

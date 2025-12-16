@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import type { Employee } from '../../../shared/types'
+import type { Employee } from '../../../../shared/types'
 
 interface AdvancedSearchProps {
     employees: Employee[]

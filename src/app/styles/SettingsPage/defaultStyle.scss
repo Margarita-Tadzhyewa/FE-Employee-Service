@@ -1,6 +1,4 @@
-@import '../reset.scss';
-@import '../header.scss';
-@import '../notFoundBlock.scss';
+@use '../notFoundBlock.scss';
 
 .permission-block {
     background-color: var(--card-form-background);
@@ -146,6 +144,13 @@
         background-color: var(--main-color-darker);
         border: 2px solid var(--main-color-darker);
     }
+}
+
+.role-error{
+    color: red;
+    margin-left: 38px;
+    font-size: 13px;
+    margin-bottom: 10px;
 }
 
 @media all and (max-width: 474px) {

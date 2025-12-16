@@ -1,6 +1,9 @@
 import { useNavigate } from 'react-router-dom'
 
 import type { Employee } from '../../../shared/types'
+import remoteIcon from '../../../assets/icons/remote-icon.svg'
+import bagIcon from '../../../assets/icons/bag.svg'
+import defAvatar from '../../../assets/images/default-avatar.jpg'
 
 interface EmployeeCardListProps {
     emp: Employee
@@ -15,10 +18,10 @@ export const EmployeeCardList = ({ emp }: EmployeeCardListProps) => {
     return (
         <div className="employe-single-list-card" onClick={onClickCard}>
             <div className="avatar-name">
-                <img src={emp.user_avatar || '../../assets/images/default-avatar.jpg'} alt="employees-avatar" />
+                <img src={emp.user_avatar || defAvatar} alt="employees-avatar" />
                 {emp.isRemoteWork && (
                     <span className="remote-icon">
-                        <img src="../../assets/icons/remote-icon.svg" alt="remote-icon" className="remote-icon-svg"/>
+                        <img src={remoteIcon} alt="remote-icon" className="remote-icon-svg"/>
                     </span>
                 )}
                 <p>
@@ -26,7 +29,7 @@ export const EmployeeCardList = ({ emp }: EmployeeCardListProps) => {
                 </p>
             </div>
 
-            <img src="./assets/icons/bag.svg" alt="bag-icon" />
+            <img src={bagIcon} alt="bag-icon" />
             <p>{emp.department}</p>
             <p>{emp.room}</p>
         </div>
