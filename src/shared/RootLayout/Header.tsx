@@ -115,7 +115,7 @@ export const Header = () => {
                                     <img
                                         src={
                                             user.user_avatar ||
-                                            '../../assets/images/default-avatar.jpg'
+                                            '../../../assets/images/default-avatar.jpg'
                                         }
                                         alt="profileImage"
                                         id="header-profile-photo"
