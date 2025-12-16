@@ -3,7 +3,7 @@ import { useState, useRef } from 'react'
 import questionIcon from '../../assets/icons/question.svg'
 import logOutIcon from '../../assets/icons/logout.svg'
 import burgerIcon from '../../assets/icons/burger.svg'
-import defAvatar from '../../../assets/images/default-avatar.jpg'
+import defAvatar from '../../assets/images/default-avatar.jpg'
 
 import '../../app/styles/header.scss'
 import { useDispatch, useSelector } from 'react-redux'
