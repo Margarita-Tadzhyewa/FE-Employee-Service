@@ -1,5 +1,9 @@
 import { Link, useNavigate, NavLink } from 'react-router-dom'
 import { useState, useRef } from 'react'
+import questionIcon from '../../assets/icons/question.svg'
+import logOutIcon from '../../assets/icons/logout.svg'
+import burgerIcon from '../../assets/icons/burger.svg'
+import defAvatar from '../../../assets/images/default-avatar.jpg'
 
 import '../../app/styles/header.scss'
 import { useDispatch, useSelector } from 'react-redux'
@@ -12,9 +16,9 @@ import { useLogoutMutation } from '../../../store/api/authApi'
 import { BurgerMenu } from './BurgerMenu'
 
 const ICONS = {
-    question: '../../assets/icons/question.svg',
-    logout: '../../src/assets/icons/logout.svg',
-    burger: '../../src/assets/icons/burger.svg',
+    question: questionIcon,
+    logout: logOutIcon,
+    burger: burgerIcon,
 }
 
 export const Header = () => {
@@ -115,7 +119,7 @@ export const Header = () => {
                                     <img
                                         src={
                                             user.user_avatar ||
-                                            '../../../assets/images/default-avatar.jpg'
+                                            defAvatar
                                         }
                                         alt="profileImage"
                                         id="header-profile-photo"
