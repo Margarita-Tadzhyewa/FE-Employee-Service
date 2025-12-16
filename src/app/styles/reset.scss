@@ -1,0 +1,86 @@
+:root {
+    --background-color: #f5f5fa;
+    --shadow-accent: rgba(0, 0, 0, 0.144);
+    --main-color: #1e5dbe;
+    --main-color-darker: #1450af;
+    --text-color: #f2f6f9;
+    --blue-accent: #5591ff;
+    --border-line-color: #e4e4e4;
+    --text-dark-color: #48525e;
+    --card-form-background: #ffffff;
+    --card-form-shadow-accent: rgba(44, 48, 51, 0.09);
+    --card-form-shadow-accent-hover: rgba(44, 48, 51, 0.09);
+
+    --separator-lime: #eceff3;
+    --text-small: #b6bec7;
+    --text-middle: #343d47;
+    --overoll-blocks: #343d4757;
+
+    --icon-remote-work: #914bbc;
+    --buttons-hover: #ebebee;
+    --label-text-color: #8d949b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+*:focus {
+    outline: 1px solid var(--blue-accent);
+    outline-offset: 1px;
+}
+
+button,
+button:active,
+button:focus {
+    outline: none !important;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1340px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    background-color: var(--background-color);
+    padding-bottom: 100px;
+} 
+
+@media (prefers-color-scheme: dark) {
+    :root {
+    --background-color: #1c1f20;
+    --shadow-accent: rgba(0, 0, 0, 0.953);
+    --main-color: #184a98;
+    --main-color-darker: #003699;
+    --text-color: #f2f6f9;
+    --blue-accent: #5591ff;
+    --border-line-color: #383c3f;
+    --text-dark-color: #a4a29f;
+    --card-form-background: #181a1b;
+    --card-form-shadow-accent: rgba(44, 48, 51, 0.09);
+    --card-form-shadow-accent-hover: rgba(44, 48, 51, 0.09);
+
+    --separator-lime: #eceff3;
+    --text-small: #a4a29f;
+    --text-middle: #e8e6e3;
+    --overoll-blocks: #343d4757;
+
+    --icon-remote-work: #914bbc;
+    --buttons-hover: #ebebee;
+    --label-text-color: #8d949b;
+    }
+}

@@ -1,0 +1,124 @@
+@use '../mixins.scss' as *;
+@import '../reset.scss';
+@import '../header.scss';
+
+.container-login {
+    display: flex;
+    justify-content: center;
+
+    .form-container {
+        width: 50%;
+        @include form-container;
+        margin-top: 100px;
+
+        .title {
+            margin-bottom: 30px;
+            font-size: 30px;
+            font-weight: 600;
+            color: var(--main-color);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 40px;
+
+            &:nth-of-type(2) {
+                margin-bottom: 15px;
+            }
+
+            > label {
+                font-size: 14px;
+                font-weight: 600;
+                color: var(--text-middle);
+            }
+
+            .text-input {
+                padding: 10px 15px;
+                width: 350px;
+                border: 1px solid var(--text-small);
+                border-radius: 5px;
+                font-size: 14px;
+                margin-top: 5px;
+                background-color: transparent;
+                color: var(--text-middle);
+            }
+
+            .error-label {
+                color: red;
+                margin-top: 3px;
+                font-size: 14px;
+            }
+        }
+
+        .form-checkbox {
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            margin-bottom: 40px;
+
+            > label {
+                font-size: 14px;
+                font-weight: 600;
+                color: var(--text-middle);
+            }
+        }
+
+        #logInButton {
+            width: 100%;
+            @include button;
+
+            &:hover {
+                background-color: var(--main-color);
+            }
+        }
+    }
+
+    .separator {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 10px;
+
+        .separator-line {
+            height: 1px;
+            width: 150px;
+            background-color: var(--text-small);
+        }
+
+        .separator-text {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--main-color);
+        }
+    }
+
+    .text-center {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--text-middle);
+
+        a {
+            color: var(--main-color);
+        }
+    }
+}
+
+@media (max-width: 474px) {
+    .container-login {
+        max-width: 411px;
+
+        .form-container {
+            width: 100%;
+            margin-top: 85px;
+
+            > form {
+                width: 100%;
+
+                .text-input {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

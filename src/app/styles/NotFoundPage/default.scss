@@ -1,0 +1,62 @@
+@use '../mixins.scss' as *;
+@import '../reset.scss';
+
+.not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    [alt='not-found'] {
+        margin-top: 30px;
+        width: 400px;
+    }
+
+    > p:first-of-type {
+        font-size: 38px;
+        font-weight: 500;
+        color: var(--label-text-color);
+        margin-bottom: 30px;
+    }
+
+    > p:nth-of-type(2) {
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--label-text-color);
+        margin-bottom: 60px;
+    }
+
+    button {
+        cursor: pointer;
+        border-radius: 7px;
+        width: 300px;
+        height: 55px;
+        background-color: var(--blue-accent);
+        color: var(--card-form-background);
+        text-transform: uppercase;
+        font-size: 18px;
+        transition: 0.4s;
+
+        &:hover {
+            background-color: var(--main-color);
+        }
+    }
+}
+
+@media all and (max-width: 474px) {
+    .not-found {
+        > p:first-of-type {
+            font-size: 29px;
+        }
+
+        p:nth-of-type(2) {
+            font-size: 14px;
+            text-align: center;
+            width: 300px;
+        }
+
+        [alt='not-found'] {
+            margin-top: 30px;
+            width: 259px;
+        }
+    }
+}

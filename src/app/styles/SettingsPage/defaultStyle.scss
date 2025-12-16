@@ -1,0 +1,226 @@
+@import '../reset.scss';
+@import '../header.scss';
+@import '../notFoundBlock.scss';
+
+.permission-block {
+    background-color: var(--card-form-background);
+    box-shadow: 0px 0px 8px 2px var(--card-form-shadow-accent);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+
+    > p:first-of-type {
+        padding: 40px 0 28px 35px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text-middle);
+        text-transform: uppercase;
+        border-bottom: 2px solid var(--separator-lime);
+    }
+}
+
+.title-tab {
+    padding: 0 35px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var(--separator-lime);
+
+    > div {
+        border-right: 2px solid var(--separator-lime);
+        width: 38%;
+        position: relative;
+
+        .search {
+            padding: 10px 15px 10px 50px;
+            width: 350px;
+            border: 1px solid var(--text-small);
+            color: var(--text-dark-color);
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: transparent;
+        }
+
+        [alt='search'] {
+            position: absolute;
+            top: 11px;
+            left: 15px;
+            width: 18px;
+        }
+    }
+
+    > p:first-of-type {
+        font-weight: 600;
+        color: var(--text-middle);
+        padding: 10px 50px;
+        font-size: 15px;
+        width: 32%;
+        border-right: 2px solid var(--separator-lime);
+    }
+
+    > p:last-of-type {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--text-middle);
+        padding: 10px 50px;
+        width: 30%;
+    }
+}
+
+.employees-roles {
+    display: flex;
+    flex-direction: column;
+}
+
+.single-empl {
+    padding: 20px 35px;
+    display: flex;
+    align-items: center;
+    background-color: var(--card-form-background);
+
+    &.grey {
+        background-color: var(--background-color);
+    }
+
+    .image-name {
+        width: 38%;
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        cursor: pointer;
+
+        > p {
+            font-weight: 700;
+            color: var(--text-middle);
+            font-size: 16px;
+            text-decoration: underline;
+        }
+
+        [alt='emp-image'] {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+        }
+    }
+
+    .change-role {
+        padding: 0 35px;
+        width: 32%;
+    }
+
+    .admin-tab {
+        padding: 0 35px;
+        width: 30%;
+    }
+}
+
+.admin-role,
+.hr-role,
+.empl-role {
+    width: 120px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 15px 0;
+    cursor: pointer;
+    background-color: var(--card-form-background);
+    border: 2px solid var(--separator-lime);
+    color: var(--label-text-color);
+    transition: 0.4s;
+
+    &:hover {
+        background-color: var(--background-color);
+        border: 2px solid var(--label-text-color);
+    }
+}
+
+.active-button {
+    background-color: var(--blue-accent);
+    border: 2px solid var(--blue-accent);
+    color: var(--text-color);
+    transition: 0.4s;
+
+    &:hover {
+        background-color: var(--main-color-darker);
+        border: 2px solid var(--main-color-darker);
+    }
+}
+
+@media all and (max-width: 474px) {
+    .container {
+        max-width: 360px;
+
+        .permission-block {
+            > p:first-of-type {
+                padding: 25px 15px;
+            }
+
+            .title-tab {
+                padding: 0px 15px;
+
+                > div {
+                    width: 100%;
+                    border-right: none;
+
+                    .search {
+                        width: 100%;
+                    }
+                }
+
+                > p {
+                    display: none;
+                }
+            }
+        }
+
+        .employees-roles {
+            .single-empl {
+                padding: 12px 15px;
+                flex-wrap: wrap;
+
+                .image-name {
+                    width: 100%;
+                    column-gap: 10px;
+                    margin-bottom: 20px;
+
+                    > p {
+                        column-gap: 10px;
+                    }
+                }
+
+                .change-role {
+                    padding: 0 12px;
+                    width: 64%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .hr-role,
+                    .empl-role {
+                        width: 96px;
+                        font-size: 13px;
+                        font-weight: 500;
+                        padding: 10px 0;
+                    }
+                }
+
+                .admin-tab {
+                    padding: 0 12px;
+                    width: 35%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .admin-role {
+                        width: 96px;
+                        font-size: 13px;
+                        font-weight: 500;
+                        padding: 10px 0;
+                    }
+                }
+            }
+        }
+    }
+}
