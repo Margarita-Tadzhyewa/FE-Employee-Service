@@ -1,8 +1,14 @@
+import bagIcon from '../../../assets/icons/bag.svg'
+import doorIcon from '../../../assets/icons/door.svg'
+import circleIcon from '../../../assets/icons/circle.svg'
+import userIcon from '../../../assets/icons/user.svg'
+
+
 const toolbarItems = [
-    { icon: 'src/assets/icons/circle.svg', alt: 'circle-icon', label: 'Photo' },
-    { icon: 'src/assets/icons/user.svg', alt: 'user-icon', label: 'Name' },
-    { icon: 'src/assets/icons/bag.svg', alt: 'bag-icon', label: 'Department' },
-    { icon: 'src/assets/icons/door.svg', alt: 'room-icon', label: 'Room' },
+    { icon: circleIcon, alt: 'circle-icon', label: 'Photo' },
+    { icon: userIcon, alt: 'user-icon', label: 'Name' },
+    { icon: bagIcon, alt: 'bag-icon', label: 'Department' },
+    { icon: doorIcon, alt: 'room-icon', label: 'Room' },
 ]
 
 export const CommonToolBar = () => {

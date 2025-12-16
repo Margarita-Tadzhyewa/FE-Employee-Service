@@ -6,32 +6,43 @@ interface InfoItem {
     colorP?: string
 }
 
+import departmentIcon from '../../assets/icons/department.svg'
+import buildingIcon from '../../assets/icons/building.svg'
+import roomIcon from '../../assets/icons/room.svg'
+import deskNumberIcon from '../../assets/icons/deskNumber.svg'
+import calendarIcon from '../../assets/icons/calendar.svg'
+import managerIcon from '../../assets/icons/manager.svg'
+import phoneIcon from '../../assets/icons/phone.svg'
+import emailIcon from '../../assets/icons/email.svg'
+import teamsIcon from '../../assets/icons/teams.svg'
+import cnumberIcon from '../../assets/icons/c-number.svg'
+
 export const generalInfo: InfoItem[] = [
     {
         label: 'Department',
-        icon: '/assets/icons/department.svg',
+        icon: departmentIcon,
         field: 'department',
     },
     {
         label: 'Building',
-        icon: '/assets/icons/building.svg',
+        icon: buildingIcon,
         field: 'building',
     },
-    { label: 'Room', icon: '/assets/icons/room.svg', field: 'room' },
+    { label: 'Room', icon: roomIcon, field: 'room' },
     {
         label: 'Desk number',
-        icon: '/assets/icons/deskNumber.svg',
+        icon: deskNumberIcon,
         field: 'desk_number',
     },
     {
         label: 'Date of birth',
-        icon: '/assets/icons/calendar.svg',
+        icon: calendarIcon,
         field: 'date_birth',
         type: 'date',
     },
     {
         label: 'Manager',
-        icon: '/assets/icons/manager.svg',
+        icon: managerIcon,
         field: 'manager',
         type: 'manager',
         colorP: 'blue',
@@ -41,30 +52,29 @@ export const generalInfo: InfoItem[] = [
 export const contacts: InfoItem[] = [
     {
         label: 'Mobile Phone',
-        icon: '/assets/icons/phone.svg',
+        icon: phoneIcon,
         field: 'phone',
         colorP: 'blue',
     },
     {
         label: 'Email',
-        icon: '/assets/icons/email.svg',
+        icon: emailIcon,
         field: 'email',
         colorP: 'blue',
     },
     {
         label: 'Skype',
-        icon: '/assets/icons/teams.svg',
+        icon: teamsIcon,
         field: 'skype',
         colorP: 'blue',
     },
-    { label: 'C-Number', icon: '/assets/icons/c-number.svg', field: 'cnumber' },
+    { label: 'C-Number', icon: cnumberIcon, field: 'cnumber' },
 ]
 
 export const travelInfo: InfoItem[] = [
     {
         label: 'Citizens',
-        icon: '/assets/icons/phone.svg',
+        icon: phoneIcon,
         field: 'citizenship',
     },
-    //     { label: 'Visa 1', icon: '/assets/icons/email.svg', field: 'visa[0].type' },
 ]
