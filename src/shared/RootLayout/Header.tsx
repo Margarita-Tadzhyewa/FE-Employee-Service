@@ -20,7 +20,7 @@ const ICONS = {
     question: questionIcon,
     logout: logOutIcon,
     burger: burgerIcon,
-    cross: crossIcon
+    cross: crossIcon,
 }
 
 export const Header = () => {
@@ -119,10 +119,7 @@ export const Header = () => {
                                     onMouseEnter={handleMouseEnter}
                                 >
                                     <img
-                                        src={
-                                            user.user_avatar ||
-                                            defAvatar
-                                        }
+                                        src={user.user_avatar || defAvatar}
                                         alt="profileImage"
                                         id="header-profile-photo"
                                     />
@@ -141,17 +138,19 @@ export const Header = () => {
                             </button>
                         </div>
 
-                        <span
-                            className="burger"
-                            onClick={() => setOpenBurger((prev) => !prev)}
-                        >
-                            {!openBurger ? (
-                                <img src={ICONS.burger} alt="burger-icon" />
-                            ) : (
-                                <img src={ICONS.cross} alt="cross-icon" />
-                            )}
-                        </span>
-
+                        {user && (
+                            <span
+                                className="burger"
+                                onClick={() => setOpenBurger((prev) => !prev)}
+                            >
+                                {!openBurger ? (
+                                    <img src={ICONS.burger} alt="burger-icon" />
+                                ) : (
+                                    <img src={ICONS.cross} alt="cross-icon" />
+                                )}
+                            </span>
+                        )}
+                        
                         {user && (
                             <BurgerMenu
                                 user={user}
